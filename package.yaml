@@ -1,0 +1,51 @@
+name:                pointfree-discord-bot
+version:             0.1.0.0
+github:              "emilyhorsman/pointfree-discord-bot"
+license:             BSD3
+author:              "Emily Horsman"
+maintainer:          "me@emilyhorsman.com"
+copyright:           "2019 Emily Horsman"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/emilyhorsman/pointfree-discord-bot#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- text == 1.2.3.1
+- discord-haskell == 0.7.1
+- pointfree == 1.1.1.4
+
+library:
+  source-dirs: src
+
+executables:
+  pointfree-discord-bot-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pointfree-discord-bot
+
+tests:
+  pointfree-discord-bot-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - pointfree-discord-bot
