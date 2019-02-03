@@ -1,3 +1,4 @@
 .stack-work/
 pointfree-discord-bot.cabal
 *~
+auth-token.secret
