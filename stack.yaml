@@ -46,6 +46,7 @@ extra-deps: [ discord-haskell-0.7.1
             , req-1.1.0
             , http-api-data-0.3.10
             , pointfree-1.1.1.4
+            , megaparsec-7.0.4
             ]
 
 allow-newer: true
